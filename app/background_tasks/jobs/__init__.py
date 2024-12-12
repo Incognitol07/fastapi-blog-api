@@ -1,0 +1,1 @@
+from .notification_cleanup import delete_old_notifications
