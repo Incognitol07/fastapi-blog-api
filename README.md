@@ -1,7 +1,3 @@
-Here’s the README for the **Blog API**, focusing on setup, project structure, and a testing example using `curl`:
-
----
-
 # Blog API
 
 The Blog API allows users to create, manage, and interact with blog posts and comments. It supports secure user authentication and provides endpoints for CRUD operations on posts and comments.
