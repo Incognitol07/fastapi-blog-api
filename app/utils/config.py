@@ -14,10 +14,11 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")  # Default to 'development'
     DEBUG: bool = ENVIRONMENT == "development"
 
-    # Uncomment this to use a SQLite database
+    # Database URL
+    # Uncomment the following line to use the DATABASE_URL from the environment variables (e.g., for PostgreSQL)
     # DATABASE_URL: str = os.getenv("DATABASE_URL")
 
-    # Comment this to use a SQLite database
+    # Comment the above line and uncomment the following line to use SQLite instead
     DATABASE_URL: str = 'sqlite:///blog.db'
 
     # Admin Master Key
