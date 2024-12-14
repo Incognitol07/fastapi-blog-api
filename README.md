@@ -54,9 +54,18 @@ The Blog API allows users to create, manage, and interact with blog posts and co
 
 3. **Set Up Environment Variables**  
    Copy the `.env.example` file to `.env` and configure it with your settings:
-   ```bash
-   cp .env.example .env
-   ```
+   - **Mac/Linux**:  
+     ```bash  
+     cp .env.example .env  
+     ```  
+   - **Windows (Command Prompt)**:  
+     ```cmd  
+     copy .env.example .env  
+     ```  
+   - **Windows (PowerShell)**:  
+     ```powershell  
+     Copy-Item .env.example .env  
+     ``` 
    Edit the `.env` file:
    ```text
    ENVIRONMENT=development
