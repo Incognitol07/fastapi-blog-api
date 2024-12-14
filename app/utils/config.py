@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     # DATABASE_URL: str = os.getenv("DATABASE_URL")
 
     # Comment the above line and uncomment the following line to use SQLite instead
-    DATABASE_URL: str = 'sqlite:///blog.db'
+    BLOG_DATABASE_URL: str = 'sqlite:///blog.db'
 
     # Admin Master Key
     MASTER_KEY: str = os.getenv("MASTER_KEY", "master_key")
@@ -31,8 +31,6 @@ class Settings(BaseSettings):
     ALLOWED_HOSTS: list = ["*"]
     CORS_ORIGINS: list = ["http://localhost", "http://localhost:3000", "http://localhost:5173"]  # Add frontend URL if applicable
 
-    class Config:
-        env_file = ".env"  # Load environment variables from a .env file if available
 
 # Instantiate settings
 settings = Settings()
