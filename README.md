@@ -47,8 +47,8 @@ The Blog API allows users to create, manage, and interact with blog posts and co
 2. **Set Up Virtual Environment**  
    Create a virtual environment and install dependencies:
    ```bash
-  python -m venv venv
-  .\venv\Scripts\activate
+   python -m venv venv
+   .\venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
