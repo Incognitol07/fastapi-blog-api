@@ -40,8 +40,8 @@ The Blog API allows users to create, manage, and interact with blog posts and co
 1. **Clone the Repository**  
    Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/Incognitol07/blog-api.git
-   cd blog-api
+   git clone https://github.com/Incognitol07/fastapi-blog-api.git
+   cd fastapi-blog-api
    ```
 
 2. **Set Up Virtual Environment**  
