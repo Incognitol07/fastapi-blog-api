@@ -11,6 +11,8 @@ from app.routers import (
     admin_router
 )
 
+# Initialize database (create tables if they don't exist)
+Base.metadata.create_all(bind=engine)
 
 # Create the FastAPI application
 @asynccontextmanager
@@ -32,8 +34,6 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Initialize database (create tables if they don't exist)
-Base.metadata.create_all(bind=engine)
 
 
 app.add_middleware(

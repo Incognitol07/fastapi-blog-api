@@ -7,7 +7,7 @@ from app.database import Base
 
 class Notification(Base):
     """
-    Represents a notification for a user, typically used for alerts or updates.
+    Represents a notification for a user, typically used for updates.
 
     Attributes:
         id (Integer): Unique identifier for each notification.
@@ -22,11 +22,12 @@ class Notification(Base):
     __tablename__ = "notifications"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
-    type = Column(String, nullable=False)
-    message = Column(String, nullable=False)
+    message = Column(String(255), nullable=False)
     is_read = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.now(), index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     
     # Relationships
-    owner = relationship("User", back_populates="notifications")
+    user = relationship(
+        "User", back_populates="notifications"
+        )
